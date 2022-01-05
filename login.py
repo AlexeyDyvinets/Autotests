@@ -6,14 +6,13 @@ import time
 
 eel.init("GUI")
 
-
 @eel.expose
 def dev_int_log():
     options = Options()
     options.add_argument('start-maximized')
     options.add_argument('disable-infobars')
     global driver
-    driver = webdriver.Chrome(chrome_options = options, executable_path="C:\\Users\\dyvinets\\Desktop\\Autotest\\chromeDriver\\chromedriver.exe")
+    driver = webdriver.Chrome(chrome_options = options, executable_path='chromeDriver\chromedriver.exe')
     driver.get(url=url)
     orgIDField = driver.find_element_by_id('client_id')
     orgIDField.clear()
@@ -82,4 +81,5 @@ def dev_fiig_log():
     password_field = driver.find_element_by_id("user_password").send_keys(password)
     login_button = driver.find_element_by_xpath("/html/body/app-root/app-login/div/div/div/div/div[5]/input").click()
     time.sleep(10)
+    
 eel.start("main.html")
