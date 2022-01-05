@@ -31,7 +31,7 @@ def dev_ass_log():
     options.add_argument('start-maximized')
     options.add_argument('disable-infobars')
     global driver
-    driver = webdriver.Chrome(chrome_options = options, executable_path="C:\\Users\\dyvinets\\Desktop\\Autotest\\chromeDriver\\chromedriver.exe")
+    driver = webdriver.Chrome(chrome_options = options, executable_path='chromeDriver\chromedriver.exe')
     driver.get(url=url)
     orgIDField = driver.find_element_by_id('client_id')
     orgIDField.clear()
@@ -50,7 +50,7 @@ def dev_cash_log():
     options.add_argument('start-maximized')
     options.add_argument('disable-infobars')
     global driver
-    driver = webdriver.Chrome(chrome_options = options, executable_path="C:\\Users\\dyvinets\\Desktop\\Autotest\\chromeDriver\\chromedriver.exe")
+    driver = webdriver.Chrome(chrome_options = options, executable_path='chromeDriver\chromedriver.exe')
     driver.get(url=url)
     orgIDField = driver.find_element_by_id('client_id')
     orgIDField.clear()
@@ -69,7 +69,7 @@ def dev_fiig_log():
     options.add_argument('start-maximized')
     options.add_argument('disable-infobars')
     global driver
-    driver = webdriver.Chrome(chrome_options = options, executable_path="C:\\Users\\dyvinets\\Desktop\\Autotest\\chromeDriver\\chromedriver.exe")
+    driver = webdriver.Chrome(chrome_options = options, executable_path='chromeDriver\chromedriver.exe')
     driver.get(url=url)
     orgIDField = driver.find_element_by_id('client_id')
     orgIDField.clear()
