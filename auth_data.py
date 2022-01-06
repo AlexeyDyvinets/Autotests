@@ -1,5 +1,7 @@
 # URLs
-url = "https://dev.bonditplatform.com/auth"
+url_dev = "https://dev.bonditplatform.com/auth"
+url_qa = "https://qa02.bonditplatform.com/"
+url_prod = "https://bonditsolutions.com/"
 # DEV org IDs
 internal_dev_org_id = "us-east-1_UxvyI5D7I"
 asset_dev_org_id = "us-east-1_AYflAz7Rm"
