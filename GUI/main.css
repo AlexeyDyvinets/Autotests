@@ -48,3 +48,13 @@ h1 {
     margin: 40px 0;
     font-size: 12px;
 }
+
+.disable{
+    background-color: rgb(163, 163, 163);
+    cursor: not-allowed;
+}
+
+.disable:hover{
+    background-color: rgb(163, 163, 163);
+    cursor: not-allowed;
+}
