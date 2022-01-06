@@ -1,0 +1,41 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #e9ecee;
+    padding: 5px;
+}
+
+button{
+    display: block;
+}
+
+.org_sections{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.org-column{
+    display: inline-flex;
+    flex-direction: column;
+    max-width: 200px;
+    align-items: center;
+}
+
+.cred_button{
+    margin: 10px 0px;
+    padding: 10px;
+    background-color: #2182bf;
+    color: #fff;
+    border: 0;
+    border-radius: 40px;
+    width: 150px;
+}
+
+.cred_button:hover{
+    background-color: #3d9cd6;
+    cursor: pointer;
+}
+
