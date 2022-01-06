@@ -17,13 +17,12 @@ def dev_int_log():
     orgIDField = driver.find_element_by_id('client_id')
     orgIDField.clear()
     orgIDField.send_keys(internal_dev_org_id)
-    time.sleep(2)
+    time.sleep(1)
     nextButton = driver.find_element_by_xpath('/html/body/app-root/org-field/div/div/div/div/div[2]/input[2]').click()
-    time.sleep(2)
+    time.sleep(1)
     username_field = driver.find_element_by_id("user_name").send_keys(admin_userName)
     password_field = driver.find_element_by_id("user_password").send_keys(password)
     login_button = driver.find_element_by_xpath("/html/body/app-root/app-login/div/div/div/div/div[5]/input").click()
-    time.sleep(10)
 
 @eel.expose
 def dev_ass_log():
@@ -36,13 +35,12 @@ def dev_ass_log():
     orgIDField = driver.find_element_by_id('client_id')
     orgIDField.clear()
     orgIDField.send_keys(asset_dev_org_id)
-    time.sleep(2)
+    time.sleep(1)
     nextButton = driver.find_element_by_xpath('/html/body/app-root/org-field/div/div/div/div/div[2]/input[2]').click()
-    time.sleep(2)
+    time.sleep(1)
     username_field = driver.find_element_by_id("user_name").send_keys(regular_userName)
     password_field = driver.find_element_by_id("user_password").send_keys(password)
     login_button = driver.find_element_by_xpath("/html/body/app-root/app-login/div/div/div/div/div[5]/input").click()
-    time.sleep(10)
 
 @eel.expose
 def dev_cash_log():
@@ -55,13 +53,12 @@ def dev_cash_log():
     orgIDField = driver.find_element_by_id('client_id')
     orgIDField.clear()
     orgIDField.send_keys(cashwerkz_dev_org_id)
-    time.sleep(2)
+    time.sleep(1)
     nextButton = driver.find_element_by_xpath('/html/body/app-root/org-field/div/div/div/div/div[2]/input[2]').click()
-    time.sleep(2)
+    time.sleep(1)
     username_field = driver.find_element_by_id("user_name").send_keys(admin_userName)
     password_field = driver.find_element_by_id("user_password").send_keys(password)
     login_button = driver.find_element_by_xpath("/html/body/app-root/app-login/div/div/div/div/div[5]/input").click()
-    time.sleep(10)
 
 @eel.expose
 def dev_fiig_log():
@@ -74,12 +71,11 @@ def dev_fiig_log():
     orgIDField = driver.find_element_by_id('client_id')
     orgIDField.clear()
     orgIDField.send_keys(fiig_dev_org_id)
-    time.sleep(2)
+    time.sleep(1)
     nextButton = driver.find_element_by_xpath('/html/body/app-root/org-field/div/div/div/div/div[2]/input[2]').click()
-    time.sleep(2)
+    time.sleep(1)
     username_field = driver.find_element_by_id("user_name").send_keys(admin_userName)
     password_field = driver.find_element_by_id("user_password").send_keys(password)
     login_button = driver.find_element_by_xpath("/html/body/app-root/app-login/div/div/div/div/div[5]/input").click()
-    time.sleep(10)
     
 eel.start("main.html")
