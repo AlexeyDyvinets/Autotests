@@ -1,7 +1,5 @@
 let dev_int_btn = document.getElementById("dev_internal_but").onclick
-= function dev_int_login(btn) {
-    let x = btn.value;
-    console.log(x)
+= function dev_int_login() {
     eel.dev_int_log()
 }
 
@@ -44,4 +42,19 @@ let prod_fiig_btn = document.getElementById("asset_but").onclick
 = function prod_ass_login() {
     eel.prod_ass_log()
 }
+
+
+
+function setLoginData() {
+    let btns = document.getElementsByClassName('dev');
+    for(let i=0; i<btns.length; i++){
+        btns[i].onclick = () =>{
+        let org = btns[i].value;
+        eel.recv_data(org);
+        };
+    }
+}
+
+setLoginData();
+
 
