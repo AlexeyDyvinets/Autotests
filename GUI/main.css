@@ -8,16 +8,13 @@ body{
     overflow: hidden;
 }
 
-button{
-    display: block;
-}
 
 h1 {
     margin: 0 0 20px;
 }
 
-.org_sections{
-    display: flex;
+#orgs{
+    display: none;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -25,7 +22,7 @@ h1 {
 .org-column{
     display: inline-flex;
     flex-direction: column;
-    max-width: 200px;
+    width: 200px;
     align-items: center;
 }
 

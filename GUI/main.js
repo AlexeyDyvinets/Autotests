@@ -1,3 +1,47 @@
+
+document.getElementById('chrome').addEventListener('click', () =>{
+    eel.logChrome()
+    var firstScreen = document.getElementById('buttons');
+    firstScreen.remove();
+    document.getElementById('orgs').style.display = "flex";
+    new Skroll()
+    .add(".org-column",{
+        delay:10,
+        duration:600,
+        animation:"ZoomIn"
+    })
+    .init();
+});
+
+
+document.getElementById('firefox').addEventListener('click', () =>{
+    eel.logFF()
+    var firstScreen = document.getElementById('buttons');
+    firstScreen.remove();
+    document.getElementById('orgs').style.display = "flex";
+    new Skroll()
+    .add(".org-column",{
+        delay:10,
+        duration:600,
+        animation:"ZoomIn"
+    })
+    .init();
+});
+
+
+// function chooseBrowser(){
+
+//     // for(let i=0; i<browser.length; i++){
+//     //     browser[i].onclick = () => {
+//     //         if (browser[i].value == "Chrome"){
+//     //             dir = "chrome";
+//     //         }
+//     //         else if(browser[i].value == "Firefox"){
+//     //             dir = "firefox";
+//     //         }
+//     //         eel.login(dir)
+ 
+
 function sendDevData() {
     let btns = document.getElementsByClassName('dev');
     for(let i=0; i<btns.length; i++){
@@ -28,7 +72,10 @@ function sendProdData() {
     }
 }
 
+
+
 sendDevData();
 sendQAData();
 sendProdData();
 
+// chooseBrowser();
