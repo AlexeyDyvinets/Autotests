@@ -32,6 +32,27 @@ h1 {
     justify-content: center;
 }
 
+.header{
+    display: flex;
+    width: 96%;
+    justify-content: space-between;
+}
+
+.back_arrow{
+    display: none;
+    width: 35px;
+    height: 35px;
+    float: right;
+    margin-top: 5.5px;
+}
+
+.back_arrow:hover{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: ease-out .3s;
+}
+
 .cred_button{
     margin: 5px 0px;
     padding: 10px;
@@ -50,7 +71,7 @@ h1 {
 
 .text {
     text-align: center;
-    margin: 40px 0;
+    margin: 43px 0;
     font-size: 12px;
 }
 

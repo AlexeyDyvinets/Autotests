@@ -4,6 +4,7 @@ document.getElementById('chrome').addEventListener('click', () =>{
     var firstScreen = document.getElementById('buttons');
     firstScreen.remove();
     document.getElementById('orgs').style.display = "flex";
+    document.getElementsByClassName('back_arrow')[0].style.display = "flex";
     new Skroll()
     .add(".org-column",{
         delay:10,
@@ -19,6 +20,7 @@ document.getElementById('firefox').addEventListener('click', () =>{
     var firstScreen = document.getElementById('buttons');
     firstScreen.remove();
     document.getElementById('orgs').style.display = "flex";
+    document.getElementsByClassName('back_arrow')[0].style.display = "flex";
     new Skroll()
     .add(".org-column",{
         delay:10,
@@ -28,7 +30,9 @@ document.getElementById('firefox').addEventListener('click', () =>{
     .init();
 });
 
-
+document.getElementsByClassName('back_arrow')[0].addEventListener('click',() => {
+    location.reload();
+});
 // function chooseBrowser(){
 
 //     // for(let i=0; i<browser.length; i++){
