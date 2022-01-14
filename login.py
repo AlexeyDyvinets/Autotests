@@ -4,7 +4,7 @@ eel.init("GUI")
 
 @eel.expose
 def logChrome():
-    import CromeLogin
+    import ChromeLogin
     
 @eel.expose
 def logFF():
