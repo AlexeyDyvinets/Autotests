@@ -109,8 +109,8 @@ def login_prod_ch(org):
         username_field = driver.find_element_by_id("user_name").send_keys(admin_userName)
         password_field = driver.find_element_by_id("user_password").send_keys(password)
         login_button = driver.find_element_by_xpath("/html/body/app-root/app-login/div/div/div/div/div[5]/input").click()
-    else:
-        driver = webdriver.Chrome(chrome_options = options, executable_path='chromeDriver\chromedriver.exe')
+    elif org == "FIIG":
+        driver = webdriver.Chrome(chrome_options = options, executable_path='webDrivers\chromedriver.exe')
         driver.get(url=url_fiig_prod)
         orgIDField = driver.find_element_by_id('client_id')
         orgIDField.clear()
