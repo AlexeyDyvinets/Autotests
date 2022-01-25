@@ -1,85 +1,46 @@
-
-document.getElementById('chrome').addEventListener('click', () =>{
-    eel.logChrome()
-    var firstScreen = document.getElementById('buttons');
-    firstScreen.remove();
-    document.getElementById('orgs').style.display = "flex";
-    document.getElementsByClassName('back_arrow')[0].style.display = "flex";
-    new Skroll()
-    .add(".org-column",{
-        delay:10,
-        duration:600,
-        animation:"ZoomIn"
-    })
-    .init();
-});
-
-
-document.getElementById('firefox').addEventListener('click', () =>{
-    eel.logFF()
-    var firstScreen = document.getElementById('buttons');
-    firstScreen.remove();
-    document.getElementById('orgs').style.display = "flex";
-    document.getElementsByClassName('back_arrow')[0].style.display = "flex";
-    new Skroll()
-    .add(".org-column",{
-        delay:10,
-        duration:600,
-        animation:"ZoomIn"
-    })
-    .init();
-});
-
 document.getElementsByClassName('back_arrow')[0].addEventListener('click',() => {
     location.reload();
 });
-// function chooseBrowser(){
 
-//     // for(let i=0; i<browser.length; i++){
-//     //     browser[i].onclick = () => {
-//     //         if (browser[i].value == "Chrome"){
-//     //             dir = "chrome";
-//     //         }
-//     //         else if(browser[i].value == "Firefox"){
-//     //             dir = "firefox";
-//     //         }
-//     //         eel.login(dir)
- 
-
-function sendDevData() {
-    let btns = document.getElementsByClassName('dev');
-    for(let i=0; i<btns.length; i++){
-        btns[i].onclick = () =>{
-        let org = btns[i].value;
-        eel.login_dev(org);
+function chooseBrowser(){
+    let browser = document.getElementsByClassName("choose-button");
+    for(let i=0; i<browser.length; i++){
+        browser[i].onclick = () =>{
+        var org = browser[i].value;
+        if(org == 'Chrome'){
+            chromeStart('/chrome.js')
+        }
+        else{
+            ffStart('/firefox.js')
+        }
+        var firstScreen = document.getElementById('buttons');
+        firstScreen.remove();
+        document.getElementById('orgs').style.display = "flex";
+        document.getElementsByClassName('back_arrow')[0].style.display = "flex";
+        new Skroll()
+            .add(".org-column",{
+                delay:10,
+                duration:600,
+                animation:"ZoomIn"
+            })
+        .init();
         };
     }
-}
-
-function sendQAData() {
-    let btns = document.getElementsByClassName('qa');
-    for(let i=0; i<btns.length; i++){
-        btns[i].onclick = () =>{
-        let org = btns[i].value;
-        eel.login_qa(org);
-        };
     }
+
+function chromeStart(src){
+    let script = document.createElement('script');
+    script.src = src;
+    script.async = false;
+    document.head.appendChild(script);
 }
 
-function sendProdData() {
-    let btns = document.getElementsByClassName('prod');
-    for(let i=0; i<btns.length; i++){
-        btns[i].onclick = () =>{
-        let org = btns[i].value;
-        eel.login_prod(org);
-        };
-    }
+function ffStart(src){
+    let script = document.createElement('script');
+    script.src = src;
+    script.async = false;
+    document.head.appendChild(script);
 }
 
 
-
-sendDevData();
-sendQAData();
-sendProdData();
-
-// chooseBrowser();
+chooseBrowser();
