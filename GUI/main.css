@@ -5,18 +5,16 @@
 body{
     background-color: #e9ecee;
     padding: 5px;
+    overflow: hidden;
 }
 
-button{
-    display: block;
-}
 
 h1 {
     margin: 0 0 20px;
 }
 
-.org_sections{
-    display: flex;
+#orgs{
+    display: none;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -24,18 +22,46 @@ h1 {
 .org-column{
     display: inline-flex;
     flex-direction: column;
-    max-width: 200px;
+    width: 200px;
     align-items: center;
 }
 
+.button_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header{
+    display: flex;
+    width: 96%;
+    justify-content: space-between;
+}
+
+.back_arrow{
+    display: none;
+    width: 35px;
+    height: 35px;
+    float: right;
+    margin-top: 5.5px;
+}
+
+.back_arrow:hover{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: ease-out .2s;
+}
+
 .cred_button{
-    margin: 10px 0px;
+    margin: 5px 0px;
     padding: 10px;
     background-color: #2182bf;
     color: #fff;
     border: 0;
     border-radius: 40px;
     width: 150px;
+    text-align: center;
 }
 
 .cred_button:hover{
@@ -45,7 +71,7 @@ h1 {
 
 .text {
     text-align: center;
-    margin: 40px 0;
+    margin: 43px 0;
     font-size: 12px;
 }
 
