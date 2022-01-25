@@ -1,47 +1,46 @@
-let dev_int_btn = document.getElementById("dev_internal_but").onclick
-= function dev_int_login(btn) {
-    let x = btn.value;
-    console.log(x)
-    eel.dev_int_log()
+document.getElementsByClassName('back_arrow')[0].addEventListener('click',() => {
+    location.reload();
+});
+
+function chooseBrowser(){
+    let browser = document.getElementsByClassName("choose-button");
+    for(let i=0; i<browser.length; i++){
+        browser[i].onclick = () =>{
+        var org = browser[i].value;
+        if(org == 'Chrome'){
+            chromeStart('/chrome.js')
+        }
+        else{
+            ffStart('/firefox.js')
+        }
+        var firstScreen = document.getElementById('buttons');
+        firstScreen.remove();
+        document.getElementById('orgs').style.display = "flex";
+        document.getElementsByClassName('back_arrow')[0].style.display = "flex";
+        new Skroll()
+            .add(".org-column",{
+                delay:10,
+                duration:600,
+                animation:"ZoomIn"
+            })
+        .init();
+        };
+    }
+    }
+
+function chromeStart(src){
+    let script = document.createElement('script');
+    script.src = src;
+    script.async = false;
+    document.head.appendChild(script);
 }
 
-let dev_ass_btn = document.getElementById("dev_asset_but").onclick
-= function dev_ass_login() {
-    eel.dev_ass_log()
-}
-
-let dev_cash_btn = document.getElementById("dev_cash_but").onclick
-= function dev_cash_login() {
-    eel.dev_cash_log()
-}
-
-let dev_fiig_btn = document.getElementById("dev_fiig_but").onclick
-= function dev_fiig_login() {
-    eel.dev_fiig_log()
-}
-
-// QA
-
-let qa_int_btn = document.getElementById("qa_internal_but").onclick
-= function qa_int_login() {
-    eel.qa_int_log()
-}
-
-let qa_ass_btn = document.getElementById("qa_asset_but").onclick
-= function qa_ass_login() {
-    eel.qa_asset_log()
-}
-
-let qa_cash_btn = document.getElementById("qa_cash_but").onclick
-= function qa_cash_login() {
-    eel.qa_cash_log()
+function ffStart(src){
+    let script = document.createElement('script');
+    script.src = src;
+    script.async = false;
+    document.head.appendChild(script);
 }
 
 
-// PROD
-
-let prod_fiig_btn = document.getElementById("asset_but").onclick
-= function prod_ass_login() {
-    eel.prod_ass_log()
-}
-
+chooseBrowser();

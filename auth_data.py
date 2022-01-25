@@ -2,6 +2,8 @@
 url_dev = "https://dev.bonditplatform.com/auth"
 url_qa = "https://qa02.bonditplatform.com/"
 url_prod = "https://bonditsolutions.com/"
+url_fiig_prod = "https://bonditaustralia.com/"
+
 # DEV org IDs
 internal_dev_org_id = "us-east-1_UxvyI5D7I"
 asset_dev_org_id = "us-east-1_AYflAz7Rm"
@@ -21,5 +23,7 @@ fiig_prod_org_id = "ap-southeast-2_vJqtTS610"
 # Login/Password
 admin_userName = "lydyia.en@nixsolutions.com"
 regular_userName = "Lidiia.Yen@bonditglobal.com"
+fiig_qa_userName = "evgeniyah"
 password = "Qwerty123*"
+fiig_password = "Adu160588$"
 

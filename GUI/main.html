@@ -6,39 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BondIT login</title>
     <script type="text/javascript" src="eel.js"></script>
-    <link rel="icon" type="image/png" href="/BondIT.png">
+    <script src="skroll.js" type="text/javascript"></script>
+    <link rel="icon" type="image/png" href="\bondit.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/main.css">
-    <link rel="shortcut icon" href="GUI\BondIT.png" type="image/png">
+    <link rel="stylesheet" href="/choose-browser.css">
+    <link rel="shortcut icon" href="\bondit.png" type="image/png">
 </head>
 <body>
-    <h1>Yes, it's BondIT login app <span>&#128521;</span></h1>
-    <div class="org_sections">
+    <div class="header">
+        <h1>Yes, it's BondIT login app <span>&#128521;</span></h1>
+        <img src="/back-arrow.png" alt="back-arrow" class="back_arrow">
+    </div>
+    <div id="buttons" class="browser_choose_section">
+        <h2 class="choose_section_header">Choose your browser, Neo!</h2>
+        <div class="choose_section_buttons">
+            <input type="button" id="chrome" class="choose-button" value="Chrome">
+            <input type="button" id="firefox" class="choose-button firefox" value="Firefox">
+        </div>
+    </div>
+    <div id="orgs" class="org_sections">
         <div class="org-column">
             <h2 class="column_header">DEV</h2>
             <div class="button_section">
-                <button id="dev_internal_but" class="cred_button" value="dev-int">Internal</button>
-                <button id="dev_asset_but" class="cred_button" value="dev-ass">Asset Management</button>
-                <button id="dev_cash_but" class="cred_button" value="dev-cash">CashWerkz</button>
-                <button id="dev_fiig_but" class="cred_button" value="dev-fiig">FIIG</button>
+                <input id="dev_internal_but" type="button" class="cred_button dev" value="Internal">
+                <input id="dev_asset_but" type="button" class="cred_button dev" value="Asset Management">
+                <input id="dev_cash_but" type="button" class="cred_button dev" value="CashWerkz">
+                <input id="dev_fiig_but" type="button" class="cred_button dev" value="FIIG">
             </div>
         </div>
         <div class="org-column">
             <h2 class="column_header">QA</h2>
             <div class="button_section">
-                <button id="qa_internal_but" class="cred_button">Internal</button>
-                <button id="qa_asset_but" class="cred_button">Asset Management</button>
-                <button id="qa_cash_but" class="cred_button">CashWerkz</button>
-                <button id="qa_fiig_but" class="cred_button disable">FIIG</button>
+                <input id="qa_internal_but" type="button" class="cred_button qa" value="Internal">
+                <input id="qa_asset_but" type="button" class="cred_button qa" value="Asset Management">
+                <input id="qa_cash_but" type="button" class="cred_button qa" value="CashWerkz">
+                <input id="qa_fiig_but" type="button" class="cred_button qa" value="FIIG">
             </div>
         </div>
         <div class="org-column">
             <h2 class="column_header">PROD</h2>
             <div class="button_section">
-                <button id="asset_but" class="cred_button">Asset Management</button>
-                <button id="fiig_but" class="cred_button disable">FIIG</button>
+                <input id="asset_but" type="button" class="cred_button prod" value="Asset Management">
+                <input id="fiig_but" type="button" class="cred_button prod" value="FIIG">
             </div>
         </div>
     </div>
